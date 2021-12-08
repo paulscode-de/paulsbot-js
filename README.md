@@ -1,6 +1,19 @@
 ## Setup
 
-Update Docker-Compose file and set BOT_TOKEN and BOT_PORT
+Copy .env.sample into .env
+```javascript
+cp .env.sample .env
+```
+
+Adjust BOT_TOKEN to your discord bot token
+```javascript
+BOT_TOKEN=YOUR_TOKEN_HERE
+```
+
+If you prefere another port for the website change BOT_PORT
+```javascript
+BOT_PORT=1337
+```
 
 ## Configuration
 

@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  bot:
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 2
+    env_file:
+      - .env
+    build: .
+    ports:
+      - "80:80"
+    networks:
+      - default
