@@ -1,5 +1,4 @@
 ## Setup
-
 Copy .env.sample into .env
 ```javascript
 cp .env.sample .env
@@ -13,6 +12,16 @@ BOT_TOKEN=YOUR_TOKEN_HERE
 If you prefere another port for the website change BOT_PORT
 ```javascript
 BOT_PORT=1337
+```
+
+### Run local
+```
+docker-compose -f docker-compose.dev.yml up -d --build
+```
+
+### Run with traefik in Docker Swarm Mode
+```
+docker stack deploy -c docker-compose.traefik.yml paulsbot
 ```
 
 ## Configuration
