@@ -1,0 +1,10 @@
+block content
+    h1= title
+    p Welcome to #{title}
+
+    p Prefix is #{prefix}
+
+    p Available commands:
+    ul
+        each val, k in commands
+            li= k + ' : ' + val.description
